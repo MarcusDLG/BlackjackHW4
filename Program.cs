@@ -15,18 +15,6 @@ namespace BlackjackHW4
       }
       return total;
     }
-    // method for dealer total
-    public static int DealerTotal(List<Card> hand)
-    {
-      var total = 0;
-      for (int i = 0; i < hand.Count; i++)
-      {
-        total += hand[i].GetCardValue();
-
-      }
-      return total;
-    }
-
     // method for displaying cards in hand
     public static string CardList(List<Card> cards)
     {
@@ -115,7 +103,12 @@ namespace BlackjackHW4
           Console.WriteLine($"player total is {playerTotal} and is holding {cardsInHand}");
           Console.WriteLine("Would you like to (HIT) or (STAY)");
           var userChoice = Console.ReadLine().ToLower();  //put in user input verification
-          if (userChoice == "hit")
+          if (userChoice != "hit" && userChoice != "stay")
+          {
+            Console.WriteLine("That is not a valid choice, chose again from hit or stay");
+            userChoice = Console.ReadLine().ToLower();
+          }
+          else if (userChoice == "hit")
           {
             playerHand.Add(deck[0]);
             deck.RemoveAt(0);

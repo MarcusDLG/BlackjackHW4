@@ -19,6 +19,7 @@ namespace BlackjackHW4
         else if (playerInput == "no")
         {
           replay = false;
+          Console.Clear();
           Console.WriteLine("Goodbye");
         }
         else if (playerInput == "yes")
