@@ -100,6 +100,8 @@ namespace BlackjackHW4
         }
         while (playerTotal <= 20 && wantsToHit == true && dealerWantsToHit == true)
         {
+          // var dealerFirst = DisplayDealerFirst(cardsInDealerHand);
+          // Console.WriteLine($"The dealer is showing {DisplayDealerFirst(cardsInDealerHand)}");
           Console.WriteLine($"player total is {playerTotal} and is holding {cardsInHand}");
           Console.WriteLine("Would you like to (HIT) or (STAY)");
           var userChoice = Console.ReadLine().ToLower();  //put in user input verification
@@ -124,6 +126,7 @@ namespace BlackjackHW4
           else if (userChoice == "stay")
           {
             wantsToHit = false;
+            Console.Clear();
             Console.WriteLine($"Dealer has a total of {dealerTotal} with the following cards in hand {cardsInDealerHand}");
           }
         }
@@ -144,28 +147,28 @@ namespace BlackjackHW4
         }
         if (playerTotal > 21)
         {
-          Console.Clear();
+
           Console.WriteLine("Sorry, you bust!");
           wantsToHit = false;
           isRunning = false;
         }
         else if (dealerTotal > 21 && playerTotal < 21)
         {
-          Console.Clear();
+
           wantsToHit = false;
           isRunning = false;
           Console.WriteLine($"Congrats, you win, dealer bust with {dealerTotal} with {cardsInDealerHand}!");
         }
         else if (playerTotal < dealerTotal)
         {
-          Console.Clear();
+
           wantsToHit = false;
           isRunning = false;
           Console.WriteLine($"Sorry, you lose. You had {playerTotal} and dealer had {dealerTotal}");
         }
         else if (playerTotal > dealerTotal)
         {
-          Console.Clear();
+
           wantsToHit = false;
           isRunning = false;
           Console.WriteLine($"Congrats, you win! You had {playerTotal} and dealer had {dealerTotal}");

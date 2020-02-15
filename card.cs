@@ -17,6 +17,11 @@ namespace BlackjackHW4
       return $"{Rank} of {Suit}";
     }
 
+    public string DisplayDealerFirst()
+    {
+      return $"{Rank[0]} of {Suit[0]}";
+    }
+
     public int GetCardValue()
     {
       if (Rank == "ace")
