@@ -1,25 +1,44 @@
-# Default Template for SDG .NET Course
+Blackjack
+In this project, you are creating a playable game of Blackjack.
 
-This is the default template for a simple .NET Core console app. This template has:
+Objectives
+Practice the skills and ideas you have learned so far
+Effectively use loops, conditionals, and other control structures to implement control flows
+Demonstrate usage of data structures to model resources
+Requirements
+Create a single-player blackjack game that plays against the house, i.e., a human player and computer dealer. You are free to create the user interface however you want, but keep it simple for Explorer Mode.
 
-- github integration
+Explorer Mode
+General Rules:
 
-## To push to github
+The game should be played with a standard deck of playing cards (52).
 
-To create and push your current code to github, use the task `create-github`.
+The house should be dealt with two cards, hidden from the player until the house reveals its hand.
 
-How?
+The player should be dealt with two cards, visible to the player.
 
-1. Open your command pallette by using (Mac) `shift + cmd + p` or (Windows) `shift + ctrl + p`
-2. Search and Select `Tasks: Run Task`
-3. Select `create-github` from the dropdown
+The player should have a chance to hit (i.e., be dealt another card) until they decide to stop or they bust (i.e., their total is over 21 ).
 
-This will create a new github repo, locally and up on github and also push your current code.
+When the player stands, the house reveals its hand and hit (i.e., draw cards) until they have 17 or more.
 
-## To turn in your assignment:
+If either the house or the player bust, they lose.
 
-after you have created a github repo, completed your project and pushed your code, follow these instructions: https://suncoast.io/handbook/tools/assignment-turn-in/
+The player should have two choices: "Hit" and "Stand."
 
-## PROTIP:
+Consider Aces to be worth 11, never 1.
 
-When you are complete with the project and have turned it in to your instructor, update this read me with details about the assignment.
+The app should display the winner. For this mode, the winner is who is closer to a blackjack (21) without going over.
+
+There should be an option to play again; this should reset the hands and reshuffle the deck.
+
+Adventure Mode
+Reveal one of the house's cards to the player when cards dealt.
+Consider aces be worth one or eleven.
+Allow the player to "Split".
+Improve the win requirements. From Wikipedia:
+Players win by not busting and having a total higher than the dealer, or not busting and having the dealer bust, or getting a blackjack without the dealer getting a blackjack. If the player and dealer have the same total (not counting blackjacks), this is called a "push," and the player typically does not win or lose money on that hand. Otherwise, the dealer wins.
+
+Epic Mode
+Add a betting system that carries between rounds
+Allow the player to "Double down" or "Surrender."
+Add more Players

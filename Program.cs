@@ -144,24 +144,28 @@ namespace BlackjackHW4
         }
         if (playerTotal > 21)
         {
+          Console.Clear();
           Console.WriteLine("Sorry, you bust!");
           wantsToHit = false;
           isRunning = false;
         }
         else if (dealerTotal > 21 && playerTotal < 21)
         {
+          Console.Clear();
           wantsToHit = false;
           isRunning = false;
           Console.WriteLine($"Congrats, you win, dealer bust with {dealerTotal} with {cardsInDealerHand}!");
         }
         else if (playerTotal < dealerTotal)
         {
+          Console.Clear();
           wantsToHit = false;
           isRunning = false;
           Console.WriteLine($"Sorry, you lose. You had {playerTotal} and dealer had {dealerTotal}");
         }
         else if (playerTotal > dealerTotal)
         {
+          Console.Clear();
           wantsToHit = false;
           isRunning = false;
           Console.WriteLine($"Congrats, you win! You had {playerTotal} and dealer had {dealerTotal}");
