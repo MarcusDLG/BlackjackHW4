@@ -2,9 +2,9 @@ using System;
 
 namespace BlackjackHW4
 {
-  public class Program2
+  public class PlayAgain
   {
-    public static void Game()
+    public static void Replay()
     {
       var replay = true;
       while (replay == true)
@@ -29,5 +29,39 @@ namespace BlackjackHW4
         }
       }
     }
+
+    // public static void Results()
+    // {
+    //   cardsInHand = CardList(playerHand);
+    //   playerTotal = Total(playerHand);
+    //   if (playerTotal > 21)
+    //   {
+
+    //     Console.WriteLine("Sorry, you bust!");
+    //     wantsToHit = false;
+    //     isRunning = false;
+    //   }
+    //   else if (dealerTotal > 21 && playerTotal < 21)
+    //   {
+
+    //     wantsToHit = false;
+    //     isRunning = false;
+    //     Console.WriteLine($"Congrats, you win, dealer bust with {dealerTotal} with {cardsInDealerHand}!");
+    //   }
+    //   else if (playerTotal < dealerTotal)
+    //   {
+
+    //     wantsToHit = false;
+    //     isRunning = false;
+    //     Console.WriteLine($"Sorry, you lose. You had {playerTotal} and dealer had {dealerTotal}");
+    //   }
+    //   else if (playerTotal > dealerTotal)
+    //   {
+
+    //     wantsToHit = false;
+    //     isRunning = false;
+    //     Console.WriteLine($"Congrats, you win! You had {playerTotal} and dealer had {dealerTotal}");
+    //   }
+    // }
   }
 }

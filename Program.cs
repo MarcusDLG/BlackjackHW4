@@ -174,7 +174,7 @@ namespace BlackjackHW4
           Console.WriteLine($"Congrats, you win! You had {playerTotal} and dealer had {dealerTotal}");
         }
       }
-      BlackjackHW4.Program2.Game();
+      BlackjackHW4.PlayAgain.Replay();
     }
   }
 }
