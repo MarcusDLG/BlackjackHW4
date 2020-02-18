@@ -72,6 +72,7 @@ namespace BlackjackHW4
         // dealer hand initial distribution
         Console.Clear();
         dealerHand.Add(deck[0]);
+        var dealerFirstCard = CardList(dealerHand);
         deck.RemoveAt(0);
 
         dealerHand.Add(deck[0]);
@@ -101,7 +102,7 @@ namespace BlackjackHW4
         while (playerTotal <= 20 && wantsToHit == true && dealerWantsToHit == true)
         {
           // var dealerFirst = DisplayDealerFirst(cardsInDealerHand);
-          // Console.WriteLine($"The dealer is showing {DisplayDealerFirst(cardsInDealerHand)}");
+          Console.WriteLine($"The dealer is showing {dealerFirstCard}");
           Console.WriteLine($"player total is {playerTotal} and is holding {cardsInHand}");
           Console.WriteLine("Would you like to (HIT) or (STAY)");
           var userChoice = Console.ReadLine().ToLower();  //put in user input verification
