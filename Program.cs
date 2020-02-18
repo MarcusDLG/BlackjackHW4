@@ -41,7 +41,7 @@ namespace BlackjackHW4
 
         for (int i = 0; i < suits.Count; i++)
         {
-          for (int j = 0; j < suits.Count; j++)
+          for (int j = 0; j < ranks.Count; j++)
           {
             var card = new Card();
             card.Rank = ranks[j]; //
